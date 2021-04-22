@@ -71,8 +71,8 @@ rest_list = load_all_timeseries('rest')
 
 from nilearn import datasets
 dataset = datasets.fetch_atlas_harvard_oxford('cort-maxprob-thr25-2mm')
-mni_brain_mask = datasets.load_mni152_brain_mask()
-mni_brain_mask_template = datasets.load_mni152_template()
+#mni_brain_mask = datasets.load_mni152_brain_mask()
+#mni_brain_mask_template = datasets.load_mni152_template()
 
 
 
@@ -136,7 +136,7 @@ plotting.plot_matrix(correlation_matrix, figure=(10, 8), labels=labels[1:],
                      vmax=0.8, vmin=-0.8, reorder=True)                  
                                    
 
-
+del rest_list
 
 
 behavior_data = pd.read_csv(r'/Volumes/Byrgenwerth/Datasets/My Connectome/master/Behavior Data/Behavior.txt', header = None, delimiter = "\t")
